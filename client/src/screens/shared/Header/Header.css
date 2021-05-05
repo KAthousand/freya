@@ -1,8 +1,36 @@
 .header-container {
-  border: 2px solid red;
+  background-color: coral;
   position: fixed;
   top: 0;
   height: 5vh;
   width: 100%;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.header-content {
+  background-color: aquamarine;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-menu {
+  background-color: aquamarine;
+  width: 85%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .header-content {
+    display: none;
+  }
+  .nav-menu {
+    display: flex;
+  }
 }

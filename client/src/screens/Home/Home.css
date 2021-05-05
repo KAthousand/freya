@@ -1,0 +1,19 @@
+.address-container {
+  background-color: aqua;
+  height: 10vh;
+  padding-bottom: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.title-photo {
+  background-color: lightcoral;
+  height: 100vh;
+  width: 100%;
+}
+
+.about-container {
+  height: 50vh;
+}
