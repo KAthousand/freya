@@ -1,8 +1,8 @@
 .header-container {
-  background-color: coral;
+  background-color: var(--dark-green);
   position: fixed;
   top: 0;
-  height: 5vh;
+  height: 6vh;
   width: 100%;
   z-index: 1000;
   display: flex;
@@ -11,17 +11,26 @@
 }
 
 .header-content {
-  background-color: aquamarine;
   height: 100%;
-  width: 80%;
+  width: 95%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
+.logo {
+  margin-right: 15%;
+  background-image: url("../../../assets/logoW.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 80%;
+  width: 15%;
+}
+
 .nav-menu {
-  background-color: aquamarine;
-  height: 5vh;
+  background-color: var(--dark-green);
+  height: 6vh;
   width: 85%;
   margin-left: 7.5%;
   display: none;
@@ -31,9 +40,21 @@
   z-index: 1000;
 }
 
+.nav-link {
+  color: var(--light-green);
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  color: var(--display-green-light);
+}
+
 .mobile-nav {
-  background-color: green;
-  margin-top: 5vh;
+  background-color: var(--dark-green);
+  margin-top: 6vh;
   height: 30vh;
   width: 100%;
   display: block;
@@ -41,7 +62,7 @@
 }
 
 .mobile-nav-closed {
-  background-color: green;
+  background-color: var(--dark-green);
   height: 0;
   margin-top: 5vh;
   transition: 0.5s;
@@ -57,18 +78,24 @@
 }
 
 .mobile-link {
+  color: var(--light-green);
   opacity: 100;
   transition: 1.5s;
   width: 50%;
   padding: 5px;
   display: flex;
   justify-content: center;
+  transition: 0.5s;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 .mobile-link:hover {
-  background-color: blue;
+  color: var(--display-green-light);
 }
 
 .mobile-link-closed {
+  color: var(--light-green);
   opacity: 0;
   width: 50%;
   padding: 5px;
@@ -76,7 +103,94 @@
   justify-content: center;
 }
 
-@media (max-width: 800px) {
+.nav-icon,
+.nav-icon2 {
+  /* border: 2px solid red; */
+  /* border: 2px solid red;
+  background-color: var(--light-red);
+  display: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 7.5vh;
+  width: 100%;
+  padding-right: 5%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-icon button {
+  border-radius: 50%;
+  height: 4.5vh;
+  width: 4.5vh;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid var(--light-green);
+  transition: 1s;
+  z-index: 1000;
+}
+
+.nav-icon button::before {
+  content: "";
+  background-color: var(--light-green);
+  position: absolute;
+  top: 1.5vh;
+  left: 0.8vh;
+  height: 2px;
+  width: 2.5vh;
+  transition: 1s ease-in-out;
+}
+
+.nav-icon button::after {
+  content: "";
+  background-color: var(--light-green);
+  position: absolute;
+  bottom: 1.25vh;
+  left: 0.8vh;
+  height: 2px;
+  width: 2.5vh;
+  transition: 1s ease-in-out;
+}
+
+.nav-icon2 button {
+  border-radius: 50%;
+  height: 4.5vh;
+  width: 4.5vh;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid var(--light-green);
+  transform: rotate(-180deg);
+  transition: 1s;
+  z-index: 1000;
+}
+
+.nav-icon2 button::before {
+  content: "";
+  background-color: var(--light-green);
+  position: absolute;
+  top: 1.75vh;
+  left: 0.7vh;
+  height: 2px;
+  width: 2.5vh;
+  transform: rotate(45deg);
+  transition: 1s ease-in-out;
+}
+
+.nav-icon2 button::after {
+  content: "";
+  background-color: var(--light-green);
+  position: absolute;
+  top: 1.75vh;
+  left: 0.7vh;
+  height: 2px;
+  width: 2.5vh;
+  transform: rotate(-45deg);
+  transition: 1s ease-in-out;
+}
+
+@media (max-width: 900px) {
   .header-container {
     display: block;
   }

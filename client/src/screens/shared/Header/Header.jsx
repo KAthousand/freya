@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useLayoutEffect, useState, useRef} from 'react';
 import "./Header.css"
 
 function Header(props) {
@@ -7,6 +7,7 @@ function Header(props) {
   return (
     <div className='header-container'>
       <div className='header-content'>
+      <div className='logo'></div>
         <a href='_blank' className='nav-link'>ORDER ONLINE</a>
         <a href='/menu' className='nav-link'>MENU</a>
         <a href='/info' className='nav-link'>LOCATION &amp; HOURS</a>
@@ -14,8 +15,10 @@ function Header(props) {
         <a href='_blank' className='nav-link'>RESERVATIONS</a>
       </div>
       <div className='nav-menu'>
-        <div className='logo'>LOGO</div>
-        <button onClick={() => setNavOpen(!navOpen)}>X</button>
+        <div className='logo'></div>
+        <div className={navOpen ? 'nav-icon2' : 'nav-icon'}>
+          <button onClick={() => setNavOpen(!navOpen)}></button>
+        </div>
       </div>
       <div className={navOpen ? 'mobile-nav' : 'mobile-nav-closed'}>
         <div className={navOpen ? 'mobile-nav-content' : 'mobile-nav-content-closed'}>

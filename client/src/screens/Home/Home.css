@@ -1,11 +1,62 @@
 .address-container {
-  background-color: aqua;
+  background-color: var(--light-green);
+  color: var(--medium-green);
   height: 10vh;
   padding-bottom: 1vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  font-size: 0.75em;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.title-logo {
+  position: absolute;
+  /* border: 2px solid red; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10vh;
+  opacity: 100;
+  transition: 0.5s;
+}
+
+.title-logo-transition {
+  opacity: 0;
+  transform: translateY(20%);
+}
+
+.title-logo::after {
+  content: "";
+  position: absolute;
+  width: 30vh;
+  height: 30vh;
+  /* top: 50%; */
+  background-image: url("../../assets/logoW.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border: 2px solid red; */
+}
+
+.feather {
+  transform: translateY(-48%);
+  height: 25vh;
+  width: 25vh;
+  background-image: url("../../assets/feather.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.feather-transition {
+  opacity: 0;
+  transform: translateY(20%);
 }
 
 .title-photo {
@@ -15,5 +66,6 @@
 }
 
 .about-container {
+  background-color: var(--medium-green);
   height: 50vh;
 }

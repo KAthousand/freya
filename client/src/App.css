@@ -24,3 +24,12 @@ button {
 .hidden {
   display: none;
 }
+
+:root {
+  --dark-green: #002029;
+  --medium-green: #014751;
+  --light-green: #3b737d;
+  --display-green: #49a687;
+  --display-green-light: #7bd8b7;
+  --display-green-dark: #09765a;
+}
