@@ -1,9 +1,11 @@
 import React from 'react';
+import Slider from '../../components/Slider/Slider';
+import './Menu.css'
 
 function Menu(props) {
   return (
-    <div>
-      <h1>I am the menu component</h1>
+    <div className='menu-container' id='menu'>
+      <Slider />
     </div>
   );
 }
