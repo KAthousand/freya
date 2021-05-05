@@ -26,6 +26,7 @@ button {
 }
 
 :root {
+  --white: #dce0df;
   --dark-green: #002029;
   --medium-green: #014751;
   --light-green: #3b737d;
